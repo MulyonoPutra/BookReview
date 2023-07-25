@@ -1,0 +1,4 @@
+<div [formGroup]="formGroup">
+  <input placeholder={{placeholder}} [formControlName]="fieldName" type="text" [ngClass]="{ 'g-invalid ng-dirty': isInvalid }">
+  <div *ngIf="isInvalid" class="error-message">{{ getErrorMessage }}</div>
+</div>

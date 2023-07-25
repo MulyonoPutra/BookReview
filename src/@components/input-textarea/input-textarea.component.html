@@ -1,0 +1,4 @@
+<div [formGroup]="formGroup">
+  <textarea [formControlName]="fieldName" rows="4" placeholder="Note"></textarea>
+  <div *ngIf="isInvalid" class="error-message">{{ getErrorMessage }}</div>
+</div>

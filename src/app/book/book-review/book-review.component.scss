@@ -1,0 +1,18 @@
+.position {
+	top: -21px;
+	left: 22px;
+	position: absolute;
+}
+
+.rating {
+  font-size: 24px;
+}
+
+.star {
+  color: #ccc;
+  cursor: pointer;
+}
+
+.star.filled {
+  color: gold;
+}

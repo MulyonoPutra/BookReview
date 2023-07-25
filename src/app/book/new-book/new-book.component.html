@@ -1,0 +1,33 @@
+<app-card-container [title]="'New Book'" [cardWidth]="'w-[590px]'">
+  <form [formGroup]="form" class="py-6">
+    <div class="flex">
+      <div class="flex-none w-32">
+        <span class="mb-4">Name</span>
+      </div>
+      <div class="flex-none mr-4">
+        <div>:</div>
+      </div>
+      <div class="flex-1 -mt-2">
+        <app-form-field [formGroup]="form" fieldName="name"></app-form-field>
+      </div>
+    </div>
+    <div class="flex mt-4">
+      <div class="flex-none w-32">
+        <span class="mb-4">Year</span>
+      </div>
+      <div class="flex-none mr-4">
+        <div>:</div>
+      </div>
+      <div class="flex-1 -mt-2">
+        <app-input-number [formGroup]="form" fieldName="year"></app-input-number>
+      </div>
+    </div>
+    <div class="flex mt-4">
+      <div class="flex-none w-32"> </div>
+      <div class="flex-none mr-4"> </div>
+      <div class="flex-1 ml-1">
+        <app-button [label]="'Add'" (clicked)="add()" [isDisabled]="form.invalid"></app-button>
+      </div>
+    </div>
+  </form>
+</app-card-container>

@@ -1,0 +1,4 @@
+<div [formGroup]="formGroup">
+  <input placeholder={{placeholder}} [formControlName]="fieldName" type="number">
+  <div *ngIf="isInvalid" class="error-message">{{ getErrorMessage }}</div>
+</div>
