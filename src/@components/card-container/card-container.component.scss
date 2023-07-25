@@ -1,5 +1,21 @@
-.position {
-	top: -21px;
-	left: 22px;
-	position: absolute;
+.wrapper {
+  @apply max-w-lg mx-auto;
+
+  .card {
+    @apply bg-white p-4 h-auto shadow-md border relative;
+
+    .headers {
+      @apply bg-white border w-[100px];
+
+      .title {
+        @apply p-2 font-medium mx-auto text-center;
+      }
+    }
+
+    .position {
+      top: -21px;
+      left: 22px;
+      position: absolute;
+    }
+  }
 }

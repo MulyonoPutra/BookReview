@@ -1,8 +1,8 @@
 <div class="p-6">
-  <div class="max-w-lg mx-auto" >
-    <div class="bg-white p-4 h-auto shadow-md border relative" [ngClass]="cardWidth">
-      <div class="bg-white border w-[100px] position">
-        <h2 class=" p-2 text-md font-semibold mx-auto text-center">{{title}}</h2>
+  <div class="wrapper">
+    <div class="card" [ngClass]="cardWidth">
+      <div class="headers position">
+        <h2 class="title">{{ title }}</h2>
       </div>
       <ng-content></ng-content>
     </div>

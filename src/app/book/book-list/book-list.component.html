@@ -1,12 +1,12 @@
 <app-card-container [title]="'Books'" [cardWidth]="'w-[590px]'">
-  <div class="flex flex-nowrap gap-1 overflow-scroll overflow-y-hidden">
+  <div class="wrapper">
     <div *ngFor="let book of books">
-      <div class="mt-4 shadow-md w-[150px] h-[150px] border relative cursor-pointer" (click)="onReview(book.name)">
-        <div class="centered text-xs font-semibold">
+      <div class="card" (click)="onReview(book.name)">
+        <div class="title">
           <p>{{ book.name | shortenerText: 10 }}</p>
         </div>
-        <div class="shadow-sm w-full h-[30px] absolute bottom-0 bg-gray-200">
-          <span class="flex items-center justify-center">{{ book.year }}</span>
+        <div class="year">
+          <span>{{ book.year }}</span>
         </div>
       </div>
     </div>

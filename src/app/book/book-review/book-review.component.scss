@@ -16,3 +16,19 @@
 .star.filled {
   color: gold;
 }
+
+.wrapper {
+  @apply max-w-lg mx-auto py-4;
+
+  .card {
+    @apply bg-white p-4 h-auto shadow-md border relative;
+
+    .box {
+      @apply bg-white border w-auto position;
+
+      .title {
+        @apply p-2 font-medium mx-auto text-center;
+      }
+    }
+  }
+}

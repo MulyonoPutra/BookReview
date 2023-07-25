@@ -4,3 +4,23 @@
 	left: 50%;
 	transform: translate(-50%, -50%);
 }
+
+.wrapper {
+  @apply flex flex-nowrap gap-1 overflow-scroll overflow-y-hidden;
+
+  .card {
+    @apply mt-4 shadow-md w-[150px] h-[150px] border relative cursor-pointer;
+
+    .title {
+      @apply centered text-xs font-semibold;
+    }
+
+    .year {
+      @apply shadow-sm w-full h-[30px] absolute bottom-0 bg-gray-200;
+
+      span {
+        @apply flex items-center justify-center;
+      }
+    }
+  }
+}

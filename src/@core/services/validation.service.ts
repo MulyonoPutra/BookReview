@@ -6,18 +6,17 @@ import { Injectable } from '@angular/core';
 	providedIn: 'root',
 })
 export class ValidationService {
-	constructor() {}
+
+  constructor() {}
 
 	isInvalid(control: FormControl): boolean {
 		return control && control.touched && control.invalid;
 	}
 
-	private pattern = /^[0-5]+$/;
-
-	// Custom validator function
 	rangeValidator(): ValidatorFn {
+    const pattern = /^[0-5]+$/;
 		return (control: AbstractControl): { [key: string]: any } | null => {
-			const valid = this.pattern.test(control.value);
+			const valid = pattern.test(control.value);
 			return valid ? null : { invalidRange: true };
 		};
 	}
